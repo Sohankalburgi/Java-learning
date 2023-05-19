@@ -1,0 +1,18 @@
+1.Programming Language is a language that is a set of instruction given by users in high level language. this high level language is converted to binary code which is only understand by the computer this conversion is done by the compiler.
+
+2.the Programming language is neccessary to communicate with computer easily as the humans are not capable to write or understand the binary(0's and 1's) code so we need programming language
+
+3.the following features are:
+* it is Know as WORA platform as it can be runned in any systems.
+* it is faster .
+* as it is OOPS oriented hence it is most reliable language.
+* it is secure 
+ 
+4. object is instance of class. it has identity, behaviour and state.
+
+5. class is a blueprint of object. it share common properties as that of object 
+
+6.The main method in java is used to know the JVM to know the main program to be executed. 
+it is the first the part to be runned by the JVM.
+
+

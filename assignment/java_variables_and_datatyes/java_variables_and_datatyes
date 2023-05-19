@@ -1,0 +1,30 @@
+1. statically typed Programming languages is the languages like JAVA,C++,C. In these languages the programmer have to specify the datatypes that is used to store an Variable.
+whereas the dynamically typed programming languages are the languages like Python. In these languages the programmer doesn't need to mention the datatypes to variable to store the programming language stores dynamically by itself.
+
+2. Variable is an container for an value. It is place where it stores the values which is required for programming.
+
+3. An Value to the variable is assigned using the equal to operator "=". 
+example int a = 10; the value 10 gets stored in the variable a of int datatype
+
+4. the primitive datatypes are set of basic datatypes. it is also used to make other datatypes like derived datatypes. the primitive datatypes are int, float, boolean, char, byte, short, long.
+
+5. All Java variables must be identified with unique names.These unique names are called identifiers. 
+
+The general rules for naming variables are:
+
+* names can contain letters, digits, underscores, and dollar signs
+* names must begin with a letter
+* names should start with a lowercase letter and it cannot contain whitespace
+* names can also begin with $ and _ 
+* names are case sensitive
+* reserved wordscannot be used as names
+
+6. the operators in Java are:
+* arithematic operator +,-,*,/,++,--,%
+* comparsion operator(logical operator) ==,<,>,<=,>=,!=
+* bitwise operator &,^,<<,>>,|
+* assignment operator +=,-=,/=,%=,*=
+
+7. the incrementation operator are to add the value by one ex a=5 then a++ is 6
+the decrementation operator is to subtract the value by one ex a=6 then a-- is 
+
