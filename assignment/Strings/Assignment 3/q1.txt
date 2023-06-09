@@ -1,0 +1,16 @@
+What is Mutable String in Java? Give Example ?
+Ans:
+the Mutable String object is created using the StringBuilder and StringBuffer object which is present in Java. The mutable String is a string which can change its value. the value doesn't remain constant over the entire program. 
+For example :
+
+class stringex{
+
+public static void main (String args[]){
+	String s = new String ("hello"); // the string s is initalised by "hello"
+	s.concat("world")  // s is concatenated by "world"
+	System.out.println(s); // the output is "hello"
+	StringBuilder p = new StringBuilder ("hello"); // mutable string object is created
+	p.append("world"); // the "world" is appended 
+	System.out.println(p); // the output is "helloworld"
+}
+}
