@@ -1,0 +1,57 @@
+1. Why do we need the Static keyword in java, Explain with example?
+Ans : the Static keyword is mostly used for memory management. whenever the variable 
+or method is created using the static keyword in the class the instance variable or method will acts
+as a static. it makes them to stored in the particular memory heap and accessable by all the objects.
+
+2. What is class loading and how does the Java program actually executes ?
+Ans : the class loading is a process where the java class is loaded by the JVM during runtime 
+environment. 
+the class loading occurs in following process loading,linking and initializing.
+loading occurs by locating the class file by it's name and converting it to object by reading
+the class file.
+the linking process occurs after loading the objects created are linked by verifying the 
+class file's integrity.
+initializing  process occurs at the last, the JVM initalise the default values of the objects 
+which is mentioned by the class but first it runs the static block if any exists.
+
+3. Can we mark an local variable as static?
+Ans : NO, we cannot use static keyword to the local variable to make it an static.
+hence it is only applicable to instance variable.
+
+4. Why is static block executed before the main method in Java?
+Ans: the static block executes first as it is loaded during the class loading stage. 
+the class is called then the static block and then the main method.hence the Static 
+block is executed before the main method.
+
+5. Why is Static method is also called as class method?
+Ans: the static method is belong to the class. can be invoked by the other class without 
+creation of the object. hence the static method is called class method.
+
+6. What is the use of static block in Java?
+Ans: the static block is necessary when you have to execute set of instruction at the time 
+of the class loading during the JVM runtime. hence during these purposes the static block is 
+much and must used .
+
+7. Difference between static and instance variable?
+Ans : the static variable is also know as global variable and remains constant over all objects
+but whereas the instance variable it changes according to the objects created.
+
+the static variable is stored in the separate heap memory area so that the data allocation is 
+efficent but the instance variable the variable gets stored at every instance when the new object 
+is created.
+
+the static variable can be called by the another class without creating object whereas 
+the instance variable needs an object to be created for it's invocation.
+
+8. Difference between static and non-static members?
+Ans : the static members:
+they have one separate heap memory area.
+it can be invoked without creation of object.
+it is efficent uses the memory.
+inside the static area we can access only static variable only
+
+the non-static members:
+they created memory area as many times the objects are created in heap.
+it cannot be invoked without creation of object.
+it consumes lot of memory than compared to static
+inside the non static area we can access both static and non-static members.

@@ -1,0 +1,60 @@
+1. What is Constructor?
+Ans : Constructor is having same name as that of the class. It doesnt have the return type.
+The Constructor is used to initalise the private instance variable of the class in order to 
+make encapsulation.
+
+2. What is Constructor chaining?
+Ans : Constructor chaining is a way to call the constructor from another constructor .
+this() method is used to call the constructor from one constructor of the same class.
+whereas the super() method is used to call the constructor of superclass.
+
+3. Can we call the subclass Constructor from a superclass Constructor?
+Ans : No,it is not possible to call the subclass from a superclass Constructor.
+
+4. What happens if you keep a return type for a constructor?
+Ans : the constructor is not called as constructor itself as it would be considered as the 
+method of the class. there is compilation error if the constructor has return type
+
+5. What is no argument constructor?
+ANs : the no argument constructor is an constructor which doesnt accepts any parameter and 
+arguments.
+the default constructor is also an no argument constructor.
+
+6. How is a No-argument constructor different from the default constructor?
+Ans : the No argument constructor is decalared by the user in the program code where as the 
+default constructor is not nessecary to be coded and it is default or automatically invoked by
+the JVM.
+
+7. WHen do we need Constructor Overloading?
+Ans : Constructor Overloading is nessecary when we have to initalise the private datamembers of
+the class from the another class which can be of many different type of argument or number 
+of arguments. hence in this situation we can use the constructor Overloading.
+
+8. What is default constructor?
+Ans : the default constructor is automatically invoked by the JVM. the default constructor doesnt
+have any parameter or arguments. As the default constructor as named default it is not necessary 
+to code by the programmer to call the default constructor. it has super() method at first line
+always. it has same access specifier as that of class 
+
+example:
+
+class Game
+{
+    private String name ;
+    private int number;
+
+    //public game()  // default constructor is created by the compiler.
+    //{
+        //super();
+
+    //}
+
+}
+class hi
+{
+    public static void main (String args[])
+    {
+        Game p = new Game();
+      
+    }
+}
