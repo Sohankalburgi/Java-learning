@@ -1,4 +1,4 @@
-
+//4.Write a program to call an method without creating an object of a class
 
 class q4
 {

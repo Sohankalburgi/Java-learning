@@ -1,0 +1,165 @@
+1.What is inheritence in Java?
+Ans: Inheritence is an feature of OOP'S in Java. It allows to inherit properties and
+behaviour of the class to another class. In order to inherit the class "extends" keyword 
+is used.
+The Main advantage of inheritence are as follows:
+* The code reusablilty can be happened
+* Make the programming much easier.
+* It also supports polymorphism.
+
+2. What is superclass and subclass?
+Ans: The superclass is also know as base class. the class which is parent is known as superclass
+but whereas the class which is derived from the superclass or baseclass is a subclass of baseclass.
+
+3. How is inheritence implemented/achieved in Java?
+Ans : the inheritence in Java can be implemented by using "extends" keyword. 
+
+class Animal{
+    public void eat()
+    {
+        System.out.println("the Animal is eating"); // here the eat method is only
+                                                    // in class Animal
+    }
+}
+class Donkey extends Animal
+{
+    // there is no eat() method in DOnkey but the extends is used so that the eat()
+    // method in Animal is inherited to Donkey class.
+}
+class Main{
+    public static void main(String args[])
+    {
+        Donkey d = new Donkey();
+        d.eat(); // hence the method is called by the object refrence of d of Donkey 
+    }
+}
+
+THis is how the inheritence can be performed.
+
+4. What is polymorphism?
+Ans : The term poly means many and morphism means form. It is a feature of OOP's where
+the operators,methods,constructor,variable exits in many forms.
+
+for example : '+' can be used for addition operation and also concatenation
+method overloading and method overidden is also polymorphism.
+
+5. Differentiate between method overloading and overriding
+Ans: 
+method overloading:-
+* the method overlaoding is using of same name method more than one time but with different 
+number of arguments and type of arguments.
+* it is known at compile time.
+
+overriding:-
+* the overriding is to change the inherited method from the parent class in child class.
+the overriding is possible when the method is mentioned in the parent class.
+* the overriding can be done by following the rules as it should be changed in child class by 
+noting the return type,access specifier(visibility),number of parameters.
+* it is known at runtime .
+
+6. What is an abstraction explain with an example?
+Ans: the abstraction is to perform tasks without knowing the internal working.
+
+if any one abstract method is present in class then the class should be abstract
+
+Example:
+abstract class AeroPlane2
+{
+    // abstract cannot be used for variable and constructor
+    abstract public void takeoff();
+    abstract public void fly();
+    public void landing()
+    {
+        System.out.println("aeroplane is landing");
+    }
+}
+class FighterPlane2 extends AeroPlane2
+{
+    public void takeoff()
+    {
+        System.out.println("FighterPlane requires smaller runeay");
+    }
+    public void fly()
+    {
+        System.out.println("FighterPlane flies at maximum height");
+    }
+}
+public class Abstraction {
+    public static void main(String[] args) {
+        AeroPlane2 ref1 = new FighterPlane2();
+        ref1.takeoff();
+        ref1.fly();
+    }
+}
+
+7. What is the difference between an abstract method and final method in
+   Java? Explain with an example
+Ans : 
+Abstraction:
+* Abstract method is used to overide the method of the subclass
+* Abstract method must not have any method.
+* Abstract method can be overidden.
+* the class must be abstract in order to use abstract method.
+
+final keyword:-
+* final keyword is used to decalare class,variable,method as constant
+* final class cannot be inherited.
+* final method cannot be overidden.
+* the final variable cannot be changed.
+
+abstract class AeroPlane2 // abstract is used in defining the class
+{
+    // abstract cannot be used for variable and constructor
+    abstract public void takeoff(); // no body for method
+    abstract public void fly();
+    final void landing()
+    {
+        System.out.println("aeroplane is landing");
+    }
+}
+class FighterPlane2 extends AeroPlane2
+{
+    public void takeoff() // overidden is possilble
+    {
+        System.out.println("FighterPlane requires smaller runeay");
+    }
+    //void landing()
+    //{
+    //    System.out.println("aeroplane is landing"); 
+    //}
+    // this above comment is error as final is used in void landing method.
+}
+public class Abstraction {
+    public static void main(String[] args) {
+        AeroPlane2 ref1 = new FighterPlane2();
+        ref1.takeoff();
+        ref1.fly();
+    }
+}
+
+8. What is the final class in Java?
+Ans: the class which has final keyword mentioned cannot be inherited 
+as the final class remain same. the property of inheritence is not 
+applicable to final class. when the programmer needs not to inherit the 
+class then he have to use final.
+
+9. Differentiate between abstraction and encapsulation?
+Ans : abstraction:-
+it allows to perform tasks without knowing internal details.
+it manages the data hiding complexity.
+
+encapsulation:-
+the encapsulation is combining data and methods in single unit known as class.
+it also enables data hiding feature but unable to manage as abstraction.
+
+10. difference between Runtime and compile time polymorphism explain with example?
+Ans : 
+Runtime polymorphism:-
+* it is known as dynamic polymorphism.
+* it is an application of method overriding
+* The inherited methods are only applicable for Runtime polymorphism.
+
+compile time polymorphism:-
+* it is known as static polymorphism.
+* it is an application of method overloading.
+* the both inherited and base methods are applicable for compile time polymorphism
