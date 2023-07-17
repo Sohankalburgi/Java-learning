@@ -1,0 +1,40 @@
+1. What is an Interface in Java?
+Ans : 
+* Interface is a Java features which enables to write the abstract class or to say abstract 
+methods. 
+
+* This feature only allows the abstract methods. 
+* In Interface all the methods are by default public abstract.
+* whereas with variables it is defaultly public static final.
+* the objects cannot be created to the Interface. 
+* there is no mention of constructor in it.
+
+2.Which modifiers are allowed for methods in an Interface ? explain with example
+Ans: 
+In interface the modifiers are default exist are public and abstract
+the default keyword can also be used to the method in order to exceute 
+the default rather than method in the class.
+
+Interface A{
+ public abstract void cal();
+}
+
+3. What is the use of interface in Java?
+Ans : 
+* the interface is use in order to design the program.
+* it serves as the blueprint of the program.
+* it is used to mention or design the services provided in the program.
+
+4.What is the difference between the abstract class and interface in Java?
+Ans : 
+abstract class:
+* abstract class cannot have both the abstract and non abstract methods at once.
+* It should be inherited to another class with the help of extends keyword.
+* abstract can have any access specifier such as private,public and protected.
+* use of keyword of abstract in methods and variables is necessary.
+
+interface :
+* the interface can have both the abstract and non abstract methods 
+* It should be inherited to another class with the help of implements keyword.
+* the interface is by default to public .
+* there is no necessary to use abstract keyword.

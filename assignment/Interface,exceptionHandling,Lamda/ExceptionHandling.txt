@@ -1,0 +1,50 @@
+1. Explain different types of error in Java?
+Ans : 
+compile time error:
+* it is also called syntax error
+* this error can be realized during compilation.
+
+run time error:
+* it is also called logic error.
+* this error is encountered when the program is runned or when the logic is wrong.
+
+2. What is exception in Java?
+Ans : 
+the exception in the natural logic flow of the program is called exception in Java.
+
+3. How can you handle exception in Java? with an example.
+Ans : 
+the exception handling can be done in Java by using the two important keywords 
+try and catch.
+* the try block performs the set of instruction in it even if it is an error.
+* the catch block accepts the error or exception and executes the set of instruction in 
+the catch block.
+
+example 
+try{
+    int res = 8/0;
+}
+catch(ArithmeticException er)
+{
+    System.out.println(er.getMessage());
+}
+
+4. Why do we need exception handling in Java?
+Ans :
+the exception handling is necessary in order  not to disturb the flow of the profram 
+for the exception cases.hence these cases needed to be dealt in other way hence we need
+exception handling in Java.
+
+5. what is the difference between exception and error?
+Ans : Errors are occured during the application run as due to the memory out of space 
+and exception is error which occurs due to the program code .
+
+6. Name the different types of exceptions in Java.
+Ans: 
+* checked exception
+* unchecked exception
+
+7. Can we just use try instead of finally and catch blocks?
+Ans :
+No, we catch block along with try as catch block takes the exception object and handles it.
+
