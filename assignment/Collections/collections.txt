@@ -1,0 +1,103 @@
+1. What is Collection framework in Java?
+Ans :
+Collection is a architect which has classes and interface.
+the collection framework is contains the interface and classes of data structures
+the datastructures are so that it stores the data in dynamic size.
+
+2. What is the difference between ArrayList and LinkedList?
+Ans : 
+ArrayList :
+the index based storing is done.
+it stores as dynamic array
+it stores in sequence memory internally.
+
+LinkedList :
+there is  no index based storing is done.
+it stores as doubly linked List.
+It stores randomly in memory internally.
+
+3.What is the difference between Iterator and ListIterator?
+Ans :
+Iterator :
+Iterator is the superclass of the Iterator.
+Iterator can be used to any data structures.
+Iterator is only used to move only forward.
+
+ListIterator:
+ListIterator is a subclass of Iterator.
+ListIterator is only used to list type of data structures.
+ListIterator is used to move both forward and backward.
+
+
+4. What is the difference between Iterator and Enumeration?
+Ans : 
+Iterator :
+the Iterator can traverse legacy and non-legacy elements.
+it fall fast.
+it is slower than Enumeration.
+
+
+Enumeration:
+it can traverse only legacy elements.
+it does't fall fast.
+it is faster than Enumeration.
+
+5. What is the difference between List and Set?
+Ans :
+List :
+It can contains the duplicates.
+list is an ordered collection.
+list allows number of null.
+
+Set:
+It cannot contain duplicates.
+it is unorderd collections stores in random location.
+it allows only one null value.
+
+6. What is the difference between HashSet and TreeSet?
+Ans: 
+HashSet:
+It stores the data in unordered ,hence it is unordered collection
+search is very easy in hashset as it has time complexity of o(1)
+the memory management is less.
+
+TreeSet:
+it stores the data in sorted way.
+search is inefficient when compared to hashset. 
+the memory management is more compared to hashset.
+
+7. What is the difference between Array and ArrayList?
+Ans :
+Array :
+it is not dynamic as it is static
+it is not the part of collection
+only one type of data can be stored at once.
+
+ArrayList: 
+it is dynamic in nature.
+it is part of collection.
+any data type of data can be used to store in it.
+
+8. What is a Map in Java?
+Ans:
+the map is a datastructures which stores the data as a key pair values.each key must be 
+unique.
+
+9.  What are the commonly used implementations of Map in Java?
+Ans : the HashMap, treeMap, linkedhashmap.
+
+10.What is the difference between HashMap and TreeMap?
+Ans ;
+HashMap :
+it is unordered collection.
+it has key value pair.
+it stores the data based on hash algorithm .
+
+
+treeMap:
+it store in sorted ordered.
+it doesnot have key value pair.
+it is not based on hash algorithm.
+
+11. How do you check if a key exists in a Map in Java?
+Ans: with the help of .containsKey() method . it has return type of Boolean data type.    
