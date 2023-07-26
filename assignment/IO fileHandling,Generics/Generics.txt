@@ -1,0 +1,30 @@
+1. What are Generics in Java?
+Ans:
+Generics is used to store the data without type .It allows classes, methods, and interfaces to be written generically
+without specifying the type of data being used.
+
+2.What are the benefits of using Generics in Java?
+Ans:
+code reduntancy
+type safety
+easy readability
+
+3. What is a Generic Class in Java?
+Ans
+The generic class is the class which can work with different types of data.
+it is a class where the datatype parameters are given by angular bracket.
+
+4. What is a Type Parameter in Java Generics?
+Ans:
+Type parameter in Java Generics is the parameter which allows mention the type which is 
+used inside the generic class. the parameter are given by the angular brackets in uppercase
+<T> <V>
+
+5.What is a Generic Method in Java?
+Ans:
+the method which works on the Generic type of data. they work on the different datatypes.
+
+6. What is the difference between ArrayList and ArrayList<T>?
+Ans:
+the ArrayList is the collection where any data can be store in it . but ArrayList<T> is type safed
+collection which only takes the particular datatype.
