@@ -1,0 +1,72 @@
+3. What is the difference between collections and streams?Explain with an Example
+Ans : 
+Collections:
+IT stored the data and it is an data structure.
+it does't use functional interface
+it can be iterated using for loop and as well as advanced for loop
+it is non consumable as it can be iteratable many times
+
+Stream:
+IT uses the data and opertors on the data only for once.
+it uses functional interface in order to perform the task.
+streams can be iterated using foreach method
+it is consumable as it is only be iteratable once. as it operates once.
+
+Example for Collections:
+import java.util.*;
+public class launch{
+    public static void main(String args[])
+    {
+        List <Integer> a = Arrays.asList(1,2,34,5,6);
+        for(Integer i : a)
+        {
+            System.out.println(i); // 1 2 34 5 6
+        }
+        Collections.sort(a); // 1 2 5 6 34
+    }   
+}
+Example for stream
+import java.util.stream.*;
+public class launch{
+    public static void main(String args[])
+    {
+        List <Integer> a = Arrays.asList(1,2,34,5,6);
+        Stream<Integer> streamdata = a.stream();
+        Stream<Integer> sortedstream = streamdata.sorted();
+        sortedstream.forEach(n-> System.out.println(n));
+    }
+}
+
+
+4. What is enums in java? explain with an example
+Ans:
+enums is a block where it contains the group of constants.
+each constant represent an enum type.
+we can also declare the variable,methods in enums.
+the constant of enums are public static void final
+
+example:
+enum Result{
+    PASS,FAIL,NR;
+}
+public class Launch{
+    public static void main(String args[])
+    {
+        for(Result i : Result.values())
+        {
+            System.out.println(i);
+        }
+    }
+}
+
+5. What are inbuilt annotations in java?
+Ans:
+annotations are introduce in java 5
+the annotations is a  tool which provides the additional information to the compiiler and JVM
+the inbuilt annotations in Java are:
+@Override
+@Inherited
+@FunctionalInterface
+@Deprecated
+@Retention
+@Target
