@@ -1,0 +1,7 @@
+1. Analyze the time complexity of the following Java code and suggest a way to improve it:
+int sum = 0;
+for(int i = 1; i <= n; i++) {
+for(int j = 1; j <= i; j++) {
+sum++;
+}
+}
