@@ -1,0 +1,7 @@
+Runnable interface
+by using Runnable interface we can use extends of other class
+more helpful for code development.
+
+extends Thread
+by using extends Thread class we cannot use extends for other class
+more helpful when you do not need any changes

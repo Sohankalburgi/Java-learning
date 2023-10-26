@@ -1,0 +1,5 @@
+{
+    "debug.terminal.clearBeforeReusing": false,
+    "code-runner.runInTerminal": true,
+    "java.debug.settings.onBuildFailureProceed": true
+}
