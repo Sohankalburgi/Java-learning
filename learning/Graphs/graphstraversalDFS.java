@@ -7,6 +7,9 @@ public class graphstraversalDFS
         adj.get(u).add(v);
         adj.get(v).add(u);
     }
+
+    // Space Complexity - O(V)
+    // Time Complexity - O(Edges+V)
     // No of vertex
     public static int V = 4;
     public static boolean vis[] = new boolean[V];

@@ -9,6 +9,8 @@ public class graphsTraversalBFS
     }
 
     // BFS traversal of graphs
+    // Time Complexity - O(Edges+V)
+    // Space Complexity - O(V)
     public static ArrayList<Integer> bfs(ArrayList<ArrayList<Integer>> adj,int V)
     {
         ArrayList<Integer> ans = new ArrayList<>();
