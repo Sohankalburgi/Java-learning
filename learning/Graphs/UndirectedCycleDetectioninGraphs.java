@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class CycleDetectioninGraphs
+public class UndirectedCycleDetectioninGraphs
 {
     public static void addEdge(ArrayList<ArrayList<Integer>> adj,int u,int v)
     {
