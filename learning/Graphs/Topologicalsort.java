@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.Stack;
 
-import org.xml.sax.SAXException;
+// Time complexity = O(E+V)
+// Space Complexity - O(V)
 
 public class Topologicalsort {
 
