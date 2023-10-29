@@ -6,6 +6,7 @@ public class UndirectedCycleDetectioninGraphs
     {
         // directed graphs
         adj.get(u).add(v);
+        adj.get(v).add(u);
     }
     
     public static boolean dfs(ArrayList<ArrayList<Integer>> adj,boolean []vis,int source,int parent)
