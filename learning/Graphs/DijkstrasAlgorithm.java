@@ -1,6 +1,9 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.PriorityQueue;
+
+import java.util.*;
+
+
+// Time complexity = O(E log(V))
+// space complexity = O(V)
 
 public class DijkstrasAlgorithm {
     static int[] dijkstra(int V, ArrayList<ArrayList<ArrayList<Integer>>> adj, int S)
