@@ -14,10 +14,7 @@ public class permutation {
 
         for(int i=0;i<nums.length;i+=1)
         {
-            if(perm.contains(nums[i]))
-            {
-                continue;
-            }
+            
             perm.add(nums[i]);
             backtrack(result,perm,nums);
             perm.remove(perm.size()-1);

@@ -1,38 +1,31 @@
 import java.util.Scanner;
 
 public class q5_NqueenProblem {
-    static int[][] Nqueen(int n)
-    {
-        int [][]board = new int[n][n];
 
-        Nqueen(board,n,0);
-        return board;
-    }
-    public static boolean issafe(int [][]board,int r,int c)
+    static boolean isSafe(int [][]board,int i,int j)
     {
-        //for checking vertical row 
-        for(int i=1;i<r;i++)
+        int n = board.length;
+        for(int row=i;row>=0;row--)
         {
-            if(board[i][c]==1)
+            if(board[row][j]==1)
             {
                 return false;
             }
         }
-        int maxleft = Math.min(r,c);
-        //for left diagonal
-        for(int i=1;i<=maxleft;i++)
+
+        int maxRight = Math.min(i,board.length-j-1);
+        for(int row=1;row<=maxRight;row++)
         {
-            if(board[r-i][c-i]==1)
+            if(board[i-row][j+row]==1)
             {
                 return false;
             }
         }
-        
 
-        int maxright = Math.min(r,board.length-1-c);
-        for(int i=1;i<=maxright;i++)
+        int maxLeft = Math.min(i,j);
+        for(int row=1;row<=maxLeft;row++)
         {
-            if(board[r-i][c+1]=='Q')
+            if(board[i-row][j-row]==1)
             {
                 return false;
             }
@@ -40,26 +33,31 @@ public class q5_NqueenProblem {
         return true;
     }
 
-    static void Nqueen(int [][]board,int n,int row)
+    static int count = 0;
+    static void backtrack(int [][]board,int n,int row)
     {
-        if(row>n)
+        
+        if(row==n)
         {
+            count++;
             return;
         }
         for(int col=0;col<n;col++)
         {
-            if(issafe(board, row, col))
+            if(isSafe(board,row,col))
             {
-                board[row][col] = 1;
-                Nqueen(board, n, row+1);
-                board[row][col] = 0;
+                board[row][col] =1;
+                backtrack(board, n,row+1);
+                board[row][col]=0;
             }
         }
     }
+    
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new  Scanner(System.in);
         int n = sc.nextInt();
-        int[][] ans = Nqueen(n);
-        System.out.println("The number of Queens "+ans);
+        int[][] board = new int[n][n];
+         backtrack(board,n,0);
+         System.out.println(count);
     }
 }
