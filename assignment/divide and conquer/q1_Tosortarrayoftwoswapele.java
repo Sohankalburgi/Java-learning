@@ -20,17 +20,17 @@ public class q1_Tosortarrayoftwoswapele {
                 x = i-1;
                 count++;
             }
-            else if(count==2)
+            else if(count==2 && arr[i-1]>arr[i])
             {
                 int temp = arr[x];
-                arr[x] = arr[i-1];
-                arr[i-1] = temp;
+                arr[x] = arr[i];
+                arr[i] = temp;
                 break;
             }
         }
         for(int i:arr)
         {
-            System.out.print(arr[i]+" ");
+            System.out.print(i+" ");
         }
     }
 }
