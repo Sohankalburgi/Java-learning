@@ -1,0 +1,257 @@
+#Datbase Related Queries 
+
+CREATE DATABASE myDB;
+USE myDB;
+DROP DATABASE myDB;
+ALTER DATABASE myDB READ ONLY = 1;
+ALTER DATABASE myDB READ ONLY = 0;
+
+#Table Related Queries
+
+CREATE TABLE employees (
+	employee_id INT  UNIQUE,
+	first_name VARCHAR(50),
+	last_name  VARCHAR(50),
+	pay DECIMAL(5, 2) NOT NULL, 
+	joining DATE,
+	CONSTRAINT chk_pay CHECK (pay >= 10.00)
+);
+
+ALTER TABLE employees
+DROP CHECK chk_pay;
+
+SELECT * FROM employees;  
+
+RENAME TABLE employees TO workers;
+
+ALTER TABLE employees 
+ADD phone_number VARCHAR(15);
+
+ employee_id  first_name last_name       pay  joining
+ 	1 	shekhar 	kourav   25.52 2023-11-21
+
+ALTER TABLE employees
+RENAME COLUMN phone_number TO email
+
+ALTER TABLE employees
+MODIFY COLUMN email VARCHAR(100)
+
+ALTER TABLE employees
+MODIFY email VARCHAR(100) 
+AFTER last_name
+
+ALTER TABLE employees
+MODIFY email VARCHAR(100)
+FIRST
+
+ALTER TABLE employees
+DROP COLUMN email;
+
+
+INSERT INTO employees 
+
+VALUES (2, "Raju", "Kushwah", 25.25, "2023-11-21"),
+	   (3, "Kartik", "Sapra", 20.20, "2023-11-22"),
+       (4, "Nayak Shri", "Trilochan", 10.20, "2023-11-01"),
+       (5, "Raj", "sharma", 20.20, "2023-11-22");
+
+SELECT * FROM employees;
+
+INSERT INTO employees (employee_id, first_name, last_name)
+
+VALUES (6, "shishir", "shishir");
+
+SELECT * FROM employees;
+
+SELECT * FROM employees WHERE pay IS NOT NULL;
+
+UPDATE employees
+SET pay = 10.25, 
+	joining = "2023-11-01"
+WHERE employee_id = 6;
+
+SELECT * FROM employees;
+set autocommit = "off";
+COMMIT;
+
+7th employee ko insert
+commit <- this is what we did(Transaction) <- checkpoint
+DELETE(its not commited)
+ROLLBACK 
+
+CREATE TABLE test (
+	my_date DATE,
+    my_time TIME,
+    my_datetime DATETIME
+);
+
+INSERT INTO test
+VALUES (current_date(), current_time(), now());
+
+SELECT * FROM test;
+
+
+ALTER TABLE employees
+ADD CONSTRAINT
+UNIQUE(employee_id)
+
+SELECT * FROM employees;
+
+INSERT INTO employees 
+
+VALUES (2, "Raju", "Kushwah", 25.25, "2023-11-21"),
+	   (2, "Kartik", "Sapra", 20.20, "2023-11-22");
+
+ALTER TABLE employees
+MODIFY pay DECIMAL(5, 2) NOT NULL;
+
+ALTER table employees
+ADD CONSTRAINT chck_pay CHECK (pay >= 10.00);
+
+use mydb;
+
+create table teacher (
+	teacher_id INT PRIMARY KEY,
+    teacher_name VARCHAR(50) NOT NULL
+);
+
+use mydb;
+ALTER TABLE employees
+ADD PRIMARY KEY (employee_id)
+
+ALTER TABLE teacher
+DROP PRIMARY KEY
+
+
+Java code - JDBC API - Database
+
+JDBC API
+
+1) JDBC Driver Manager
+2) JDBC Driver
+
+Uber(Cab booking App) Drivers Ko Manage Krta Hai
+\
+ \
+  Many Drivers
+   \
+    \
+     Cab(Database(MySQL, OrcaleDB))
+
+Driver 1 - 9110
+Driver 2 - 9111
+
+
+JDBC Driver Manager
+
+JDBC Driver1 - MySQL
+JDBC Driver2 - OracleDB
+
+Java Code -> JDBC API -> JDBC Driver MAnager - JDBC MySQL Driver -> MySQL
+					     - JDBC Oracle Driver -> Oracle 	
+
+Steps to add the jar 
+
+System library right click -> Build Path -> Configure Build Path -> ModulePath -> External Jars -> External jar pick kri open -> Apply -> Apply and Close
+
+Statement(I) -robust -> PreparedStatement(I)(compile once and takes parameter ?, one based indexing)
+
+create table teacher(
+    teacher_id INT PRIMARY KEY AUTO_INCREMENT,
+    teacher_name VARCHAR(50)
+);
+
+ResultSet -> Result returned on executing the read query or select query
+
+Teacher_ID Teacher_NAME <- next pointer
+  2 		Kartik
+  5 		Kartik
+
+id      name <- next pointer
+1	ram
+2	kartik
+3	rajesh
+4	Harish
+5	kartik
+
+name(head) -> ram -> kartik -> rajesh -> harish -> kartik -> null
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class JDBCCrud {
+
+	public static Connection conn = null;
+	public static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		// Register krte ho driver ko
+		// Connection establish krna(Code or database mein connection establish ho jaega)
+		// SQL queries ko execute krna hai(Statement)
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			//databse url, user name, password
+			String url = "jdbc:mysql://localhost:3306/teachers";
+			String username = "root";
+			String password = "password";
+			conn = DriverManager.getConnection(url, username, password);
+			delete();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			throw new RuntimeException("Something went wrong!");
+		}
+	}
+	
+	private static void insert() throws SQLException {
+		String sql = "insert into teacher(teacher_name) values (?)";
+		PreparedStatement stat = conn.prepareStatement(sql);
+		stat.setString(1, sc.nextLine());
+		int rows = stat.executeUpdate();//return number of rows affected
+		if(rows > 0) {
+			System.out.println("record inserted successfully OK");
+		}
+	}
+	
+	private static void read() throws SQLException {
+		// TODO Auto-generated method stub
+
+		String sql = "select * from teacher";
+		PreparedStatement stat = conn.prepareStatement(sql);
+		
+		ResultSet rs = stat.executeQuery();
+		
+		while(rs.next()) {
+			System.out.println(rs.getInt(1) + " " + rs.getString(2));
+		}
+	}
+	
+	private static void update() throws SQLException {
+		// TODO Auto-generated method stub
+
+		String sql = "update teacher set teacher_name = ? where teacher_id = ?";
+		PreparedStatement stat = conn.prepareStatement(sql);
+		stat.setString(1, "raju rastogi");
+		stat.setInt(2, 2);
+		
+		int rows = stat.executeUpdate();
+		if(rows > 0) {
+			System.out.println("update is successful");
+		}
+	}
+	
+	private static void delete() throws SQLException {
+		// TODO Auto-generated method stub
+		String sql = "delete from teacher where teacher_id = 4";
+		PreparedStatement stat = conn.prepareStatement(sql);
+		int rows = stat.executeUpdate();
+		if(rows > 0) {
+			System.out.println("delete is successful");
+		}
+	}
+}
