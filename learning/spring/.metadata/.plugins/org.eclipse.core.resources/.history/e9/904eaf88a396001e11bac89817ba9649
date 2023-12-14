@@ -1,0 +1,21 @@
+package com.example.firstspringproject;
+
+public class Engine {
+
+	private String engine;
+	private int cc;
+	public String getEngine() {
+		return engine;
+	}
+	public void setEngine(String engine) {
+		this.engine = engine;
+	}
+	public int getCc() {
+		return cc;
+	}
+	public void setCc(int cc) {
+		this.cc = cc;
+	}
+	
+	
+}

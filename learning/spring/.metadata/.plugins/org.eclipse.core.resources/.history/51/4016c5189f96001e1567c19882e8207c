@@ -1,0 +1,40 @@
+package com.example.firstspringproject;
+
+import org.springframework.stereotype.Component;
+
+// the component annotation makes the class Car as factory
+@Component
+
+public class Car {
+		
+	private String name="Bugati";
+	private String color="Yellow";
+	
+	Car()
+	{
+		System.out.println("The Car is manufactored");
+	}
+	
+//	private Engine engine;
+//	
+//	public Engine getEngine() {
+//		return engine;
+//	}
+//	public void setEngine(Engine engine) {
+//		this.engine = engine;
+//	}
+
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getColor() {
+		return color;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+}

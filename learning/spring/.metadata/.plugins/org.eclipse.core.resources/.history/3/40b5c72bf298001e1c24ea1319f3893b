@@ -1,0 +1,13 @@
+package com.example.FirstJavaWeb.sohan.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+// Rest Controller is used to make the API visibilty in of the class
+@RestController
+public class FirstController {
+	
+	public String getHelloWorld()
+	{
+		return "Hello World";
+	}
+}

@@ -1,0 +1,23 @@
+package com.example.firstspringproject;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+@SpringBootApplication
+public class FirstspringprojectApplication {
+
+	public static void main(String[] args) {
+		
+		// the context saves the instance of entire application
+		ConfigurableApplicationContext context = SpringApplication.run(FirstspringprojectApplication.class, args);
+		
+		Car c1 = context.getBean(Car.class);
+		System.out.println(c1.getName());
+		System.out.println(c1.getColor());
+		
+//		Car c1 = new Car();
+//		Engine engine1 = new Engine();
+//		c1.setEngine(engine1);	}
+
+}
