@@ -1,0 +1,33 @@
+package com.example.WatchListApp.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.WatchListApp.Repository.MovieRepository;
+import com.example.WatchListApp.entity.Movie;
+
+@Service
+public class Databaseservice {
+
+	@Autowired
+	MovieRepository movieRepo;
+	
+	// create 
+	public void create(Movie movie)
+	{
+		movieRepo.save(movie);
+	}
+	
+	//to get all rows in DB
+	public List<Movie> getAllmovies()
+	{
+		return movieRepo.findAll();
+	}
+	
+	public Movie getmoviebyId(int id)
+	{
+		return movieRepo.getById(id);
+	}
+}

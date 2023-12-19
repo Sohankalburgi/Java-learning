@@ -1,0 +1,5 @@
+package com.example.MarvelSuperheroSpringbootCrud.springcrud.services;
+
+public class CRUDservice {
+
+}

@@ -1,0 +1,5 @@
+package com.example.WatchListApp.Repository;
+
+public interface MovieRepository {
+
+}

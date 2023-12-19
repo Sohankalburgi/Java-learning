@@ -1,0 +1,15 @@
+package com.example.WatchListApp.entity.validations;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+
+// the target annotation marks the custom annotation that it should be applied at specific location
+@Target(ElementType.FIELD)
+// the retention annotation marks the custom annotation that it is used at the runtime or the time where it is used
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Priority {
+	
+}

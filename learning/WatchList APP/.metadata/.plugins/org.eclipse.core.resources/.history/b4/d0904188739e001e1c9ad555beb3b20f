@@ -1,0 +1,5 @@
+package com.example.WatchListApp.entity.validations;
+
+public @interface Rating {
+
+}

@@ -1,0 +1,20 @@
+package com.example.WatchListApp.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.WatchListApp.Repository.MovieRepository;
+import com.example.WatchListApp.entity.Movie;
+
+@Service
+public class Databaseservice {
+
+	@Autowired
+	MovieRepository movieRepo;
+	
+	// create 
+	public void create(Movie movie)
+	{
+		movieRepo.save(movie);
+	}
+}

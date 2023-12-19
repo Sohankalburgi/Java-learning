@@ -1,0 +1,5 @@
+package com.example.WatchListApp.entity.Rating;
+
+public @interface Rating {
+
+}

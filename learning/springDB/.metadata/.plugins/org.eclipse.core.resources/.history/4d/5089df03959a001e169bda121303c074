@@ -1,0 +1,27 @@
+package com.example.MarvelSuperheroSpringbootCrud.springcrud.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.MarvelSuperheroSpringbootCrud.springcrud.services.CRUDservice;
+
+// controller is used to call the API
+@RestController
+public class MarvelCrudController {
+	
+	//CRUD
+	// Create API endpoint - POST
+	
+	@Autowired
+	CRUDservice crudservice; 
+	
+	@PostMapping(path = "create")
+	public void createCharacter(@RequestBody Characters superhero)
+	{
+			crudservice.createSuperhero(superhero);
+	}
+	
+
+}

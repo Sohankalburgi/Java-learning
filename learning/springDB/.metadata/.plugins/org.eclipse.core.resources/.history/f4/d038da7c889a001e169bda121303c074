@@ -1,0 +1,10 @@
+package com.example.MarvelSuperheroSpringbootCrud.springcrud.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+// controller is used to call the API
+@RestController
+public class MarvelCrudController {
+	
+
+}

@@ -1,0 +1,5 @@
+package com.example.WatchListApp.controllers;
+
+public class MovieController {
+
+}

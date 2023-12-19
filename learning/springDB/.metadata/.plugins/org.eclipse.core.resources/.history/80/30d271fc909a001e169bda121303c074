@@ -1,0 +1,10 @@
+package com.example.MarvelSuperheroSpringbootCrud.springcrud.services;
+
+import org.springframework.stereotype.Service;
+
+// the annotation service and annotation component are almost same
+@Service
+public class CRUDservice {
+	
+	
+}

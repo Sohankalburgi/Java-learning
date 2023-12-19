@@ -1,0 +1,5 @@
+package com.example.MarvelSuperheroSpringbootCrud.models;
+
+public class Character {
+
+}

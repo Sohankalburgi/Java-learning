@@ -1,0 +1,20 @@
+package com.example.WatchListApp.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+@RestController
+public class MovieController {
+	
+	// the url name below 
+	@GetMapping(path = "/watchlistitemform")
+	public ModelAndView showWatchListForm()
+	{
+		// View Part
+		// the string given is the name of the html page
+		String viewName = "WatchListForm";
+		
+		Map<String,Object>
+	}
+}

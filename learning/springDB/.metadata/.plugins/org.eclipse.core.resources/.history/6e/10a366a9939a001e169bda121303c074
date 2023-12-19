@@ -1,0 +1,20 @@
+package com.example.MarvelSuperheroSpringbootCrud.springcrud.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.MarvelSuperheroSpringbootCrud.models.Characters;
+import com.example.MarvelSuperheroSpringbootCrud.springcrud.repositories.Superherocharactersrepository;
+
+// the annotation service and annotation component are almost same
+@Service
+public class CRUDservice {
+	
+	@Autowired
+	Superherocharactersrepository superherocharacterrespository;
+	
+	public void createSuperhero(Characters character)
+	{
+		superherocharacterrespository.save(Characters)
+	}
+}
